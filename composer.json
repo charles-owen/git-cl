@@ -1,0 +1,23 @@
+{
+  "name" : "cl/git",
+  "description": "CourseLib GIT student assessment component.",
+  "type" : "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Charles B. Owen",
+      "email": "cbowen@msu.edu"
+    }
+  ],
+  "autoload":{
+    "psr-4": {
+      "CL\\Git\\": "src/Git"
+    }
+  },
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/charles-owen/git-cl.git"
+    }
+  ]
+}
