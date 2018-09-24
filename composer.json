@@ -1,6 +1,6 @@
 {
   "name" : "cl/git",
-  "description": "CourseLib GIT student assessment component.",
+  "description": "CourseLib GIT team monitoring and assessment component.",
   "type" : "library",
   "license": "MIT",
   "authors": [
@@ -14,10 +14,19 @@
       "CL\\Git\\": "src/Git"
     }
   },
+  "require" : {
+    "cl/course": "^2.0",
+    "cl/team": "^2.0"
+  },
   "repositories": [
     {
       "type": "vcs",
       "url": "https://github.com/charles-owen/git-cl.git"
     }
-  ]
+  ],
+  "extra": {
+    "branch-alias": {
+      "dev-master": "2.0.x-dev"
+    }
+  }
 }
