@@ -133,12 +133,15 @@ class Git {
 		$regex = "#" . $this->gitServer . "/(.*/.*)\.git#";
 		$matches = array();
 		if(preg_match($regex, $this->gitURL, $matches) !== 1 || count($matches) < 2) {
-			throw new GitException("<p>Team provided GIT URL is invalid.</p>" .
-			    "<p>$this->gitURL</p>");
+			// See if they omitted the .git?
+			$regex = "#" . $this->gitServer . "/(.*/.*)#";
+			if(preg_match($regex, $this->gitURL, $matches) !== 1 || count($matches) < 2) {
+				throw new GitException("<p>Team provided GIT URL is invalid.</p>" .
+					"<p>$this->gitURL</p>");
+			}
 		}
 
 		$this->projectName = $matches[1];
-
 	}
 
 	/**
