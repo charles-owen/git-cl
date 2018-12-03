@@ -17,6 +17,10 @@ use CL\Team\Submission\TeamSubmissions;
  * Exception class for Git errors
  */
 class GitException extends \Exception {
+	/**
+	 * GitException constructor.
+	 * @param string $msg Exception message
+	 */
 	public function __construct($msg) {
 		parent::__construct($msg);
 	}
