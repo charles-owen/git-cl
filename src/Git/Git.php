@@ -373,6 +373,9 @@ HTML;
 		curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
 
 		$json = curl_exec($curl);
+//        if($json === false) {
+//            var_dump(curl_error($curl));
+//        }
 
 		curl_close($curl);
 		return $json;
